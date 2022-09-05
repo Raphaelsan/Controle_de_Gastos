@@ -1,0 +1,60 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listagem</title>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <h2>Transações</h2>
+    <ul>
+    {%for transacao in transacoes%}
+
+        <li><a id="linksaida" href="{% url 'url_updatet' transacao.id %}">{{ transacao.descrição }} - R${{ transacao.valor }} -
+            {{ transacao.data }} - {{ transacao.categoria }}</a></li>
+
+    {%endfor%}
+
+    </ul>
+    <ul>
+
+    {%for transacao2 in transacoes_e%}
+
+    <li><a id="linkentrada" href="{% url 'url_update' transacao2.id %}">{{ transacao2.descrição }} - R${{ transacao2.valor }} -
+        {{ transacao2.data }} - {{ transacao2.fonte }}</a></li>
+
+    {%endfor%}
+
+    </ul>
+    
+    
+    <a id="botão" href="{% url 'url_nova' %}">Nova Saída</a>
+    <a id="botão-2" href="{% url 'url_novae' %}">Nova Entrada</a>
+    <br>
+    <a id="botão" href="{% url 'url_novac' %}">Nova Fonte de Gastos</a>
+    <a id="botão-2" href="{% url 'url_novaf' %}">Nova Fonte de Receita</a>
+    <br>
+    <h2>Carteira</h2>
+    <ul>
+    {%for count in entradas%}
+
+        <li>{{ count.valor }}</li>
+
+    {%endfor%}
+
+    </ul>
+    <ul>
+    {%for count in saídas%}
+
+        <li>{{ count.valor }}</li>
+
+    {%endfor%}
+    </ul>
+</body>
+</html>

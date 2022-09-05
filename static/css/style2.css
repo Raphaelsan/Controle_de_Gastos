@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(90deg, #BDE0FE, #bde0fe96);
+    background-attachment: fixed;
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+ul {
+    line-height: 140%;
+    list-style-type: circle;
+    margin-left: -1em;
+
+}
+
+/* Texto */
+
+* {
+    font-size: 1.05em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    background-image: linear-gradient(to left,  #CDB4DB, #bb72e6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    text-align: center;
+}
+#linkentrada {
+    color: #78967c;
+}
+
+    #linkentrada:hover {
+        color: #4c9956;
+
+    }
+
+#linksaida {
+    color: #cc9494;
+
+}
+
+    
+    #linksaida:hover{
+        color: #c76060;
+
+    }
+
+a {
+    color: #967882;
+    text-decoration: none;
+
+}
+
+a:active {
+    color: #FFC8DD;
+}
+
+a:hover {
+    color: #5c494f;
+}
+
+#botão, #botão-2{
+    background-color: #FFAFCC;
+    box-shadow: 0 5px 0 #b67c91;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    box-sizing: content-box;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3%;
+    padding: 1em;
+    margin: 1em;
+    width: 25%;
+    border: none;
+
+
+
+}
+
+#botão:hover, #botão-2:hover {
+    background-color: #cc8da4;
+}
+
+#botão:active {
+    box-shadow: none;
+    top: 5px;
+    background-color: #cc9494;
+}
+#botão-2:active {
+    box-shadow: none;
+    top: 5px;
+    background-color: #78967c;
+}
+
+
+
+/* Formulário */
+
+input[type=text] {
+    margin-inline-end: 100%;
+    width: 15em;
+
+    /* width: 10em; */
+
+}
+
+input[type=number] {
+    margin-inline-end: 100%;
+    width: 7.5em;
+
+}
+
+select {
+    margin-inline-end: 100%;
+    width: 15em;
+
+}
+
+#id_observações {
+    background-color: #FFC8DD;
+    margin-inline-end: 100%;
+    width: 20em;
+}
+
+button {
+    background-color: #FFAFCC;
+    box-shadow: 0 5px 0 #b67c91;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    border-radius: 15%;
+
+}
+
+button:hover {
+    background-color: #cc8da4;
+}
+
+button:active {
+    box-shadow: none;
+    top: 5px;
+    color: #BDE0FE;
+}

@@ -1,0 +1,70 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+<html dir="ltr"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+</head>
+
+<body>
+    <h1>Seja bem vindo</h1>
+    <p>Agora são: {{ now }}</p>
+    <ul>
+    {%for transacao in transacoes%}
+        {%if transacao == 't1'%}
+        <li><b>{{ transacao }}</b></li>
+
+        {%else%}
+            <li>{{ transacao }}</li>
+        {%endif%}
+        {% endfor %}
+
+    </ul>
+
+    <h2>Listas Ordenadas e Não ordenadas</h2>
+    <ol>
+    <li>Lorem ipsum dolor sit amet?
+    <li>Lorem ipsum dolor sit amet?
+    <li>Lorem ipsum dolor sit amet?
+    </ol>
+    <ul>
+    <li>Lorem ipsum dolor sit amet?
+    <li>Lorem ipsum dolor sit amet?
+    <li>Lorem ipsum dolor sit amet?
+    </ul>
+    
+    <h2>Links</h2>
+    <h3>Externo</h3>
+    <p><a href="https://www.washingtonpost.com/" target="_blank" rel="external" hreflang="x-default">Esse link</a> vai levá-lo a uma pagina externa em outro idioma</p>
+    <h3>Interno</h3>
+    <p><a href="/home2/" rel="next">Esse link</a> vai levá-lo a outra página no mesmo site</p>    
+    <h2>Um vídeo Interno</h2>
+    <p>Vídeo Hospedado Internamente</p>
+    <video width="600" controls poster="/home/raphael/projeto/contas/templates/contas/IMG_0080.JPG"></video>
+    <source src="73d293d0c93b64cbca3ffadd15bcb531.mov" type="video/mov">
+    <h2>Agora um vídeo externo</h2>
+    <p>Esse vídeo veio do youtube</p>
+    <iframe width="320" height="376" src="https://www.youtube.com/embed/H7rlQEYaXKw" title="Isso né ideia não boy, bagui de frango" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <h2>Imagem Diversos tamanhos</h2>
+    <p></p>
+    
+    <h2>Trabalhando com fontes</h2>
+    <h3>Internas</h3>
+    <p></p>
+    <h3>Externas</h3>
+    
+    <p></p>
+    <h2>Direcionar para admin</h2>
+    <p>Clique <a href="/admin/" rel="next">Aqui</a></p>
+</body>
+</html>
